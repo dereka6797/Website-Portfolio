@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Roboto:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +8,9 @@
 html, body {
     width: 100%;
     height: 100%;
-    background: rgb(15, 24, 44);
     scroll-behavior: smooth;
     scroll-padding-top: var(--scroll-padding, 60px);
+  font-family: 'Gotu', sans-serif;
 }
 
 nav {
@@ -22,14 +24,13 @@ nav {
 
 /*Logo Styles*/
 .logo {
-    padding: 1vh 1vw;
-    text-align: center;
+    font-size: 44px;
+    color: white;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    font-weight: 90;
 }
 
-.logo img {
-    height: 5rem;
-    width: 5rem;
-}
 
 /*Link Styles*/
 .nav-links {
@@ -56,6 +57,11 @@ nav {
     position: relative;
 }
 
+.nav-links li:hover {
+  font-size: 28px;
+  transition: .6s;
+}
+
 .nav-links li a::before {
     display: block;
     height: 3px;
@@ -68,43 +74,6 @@ nav {
 
 .nav-links li a:hover::before {
     width: 80%;
-}
-
-/*Button Styles*/
-
-.login-button {
-    background-color: transparent;
-    border: 1.5px solid #f2f5f7;
-    border-radius: 2em;
-    padding: 0.6rem 0.8rem;
-    margin-left: 2vw;
-    font-size: 1rem;
-    cursor:pointer;
-    color: white;
-}
-
-.login-button:hover {
-    color: #131418;
-    background-color: #f2f5f7;
-    border: 1.5px solid #f2f5f7;
-    transition: all ease-in-out 350ms;
-}
-
-.join-button {
-    color: #131418;
-    background-color: #61DAFB;
-    border: 1.5px solid #61DAFB;
-    border-radius: 2em;
-    padding: 0.6rem 0.8rem;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.join-button:hover {
-    color: #f2f5f7;
-    background-color: transparent;
-    border: 1.5px solid #f2f5f7;
-    transition: all ease-in-out 350ms;
 }
 
 /*Hamburger icon*/
@@ -198,11 +167,20 @@ nav {
 
 .center-txt {
     text-align: center;
-    font-size: 5rem;
-    font-weight: 100;
-    color: #429bb4;
+    font-size: 6rem;
+    font-weight: 150;
+    color: rgb(74, 82, 220); /*NO*/
     margin-top: 5%;
     display: grid;
+}
+
+.center-main-txt {
+  font-size: 7rem;
+  text-align: center;
+  font-weight: 200;
+  margin-to: 5%;
+  color: black;
+  text-decoration: outline;
 }
 
 .lead-center-txt {
@@ -230,8 +208,38 @@ nav {
 }
 
 .container-1 {
-    background-color:rgba(0, 0, 0, 0.2);
     padding: 15rem 5rem 10rem;
+}
+
+/*container-1 background*/
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #00203FFF 50%, #00B1D2FF 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
 }
 
 .container-2 {
@@ -245,10 +253,8 @@ li {
 }
 
 code {
-    text-align:center;
     font-size: 2rem;
     color: rgb(54, 112, 0);
-    padding-left: 2rem;
 }
 
 .container-3 {
@@ -257,24 +263,29 @@ code {
 }
 
 .centered {
-    text-align:center;
-    padding: 2rem 5rem 2rem;
+    text-align: center;
+    padding: 3rem;
     font-size: 2rem;
+}
+
+.centered a{
+  text-decoration: none;
+}
+
+.centered a:hover {
+  text-decoration: underline;
+  color: yellow;
 }
 
 
 .foot-center-txt {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 160;
     padding: 3rem;
     color:#fff;
 }
 
-.foot-center-txt a {
-    color: rgb(54, 112, 0);
-    text-decoration: none;
-}
 
 .container-4 {
     background-color: rgb(219, 219, 219);
